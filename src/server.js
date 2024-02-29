@@ -133,6 +133,10 @@ app.get('/report', reportQueriesMiddleware, reportReqValidation, async (req, res
     }
 });
 
+app.get('*', (req, res) => {
+    res.status(400).json("invalid path");
+})
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
