@@ -133,8 +133,8 @@ app.get('/report', reportQueriesMiddleware, reportReqValidation, async (req, res
     }
 });
 
-app.get('*', (req, res) => {
-    res.status(400).json("invalid path");
+app.get('*', (_req, res) => {
+    res.status(404).json("invalid path");
 })
 
 // Start the server
