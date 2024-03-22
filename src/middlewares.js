@@ -1,6 +1,6 @@
 // Nisan Cohen Burayev 315433656
 
-import { getMonth, categories, yearValidation, monthValidation, dayValidation, categoryValidation, sumValidation } from './validators.js';
+import { getMonth, descriptionValidation, yearValidation, monthValidation, dayValidation, categoryValidation, sumValidation } from './validators.js';
 
 
 // convert income details to correct type - in addCost endpoint
@@ -33,6 +33,7 @@ export const addCostReqValidation = (req, res, next) => {
 
 // convert income details to correct type - in report endpoint
 export const reportQueriesMiddleware = (req, _res, next) => {
+    req.query.user_id = String(req.query.user_id)
     req.query.year = Number(req.query.year);
     req.query.month = getMonth(req.query.month);
     next();

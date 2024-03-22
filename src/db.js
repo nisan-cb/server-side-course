@@ -41,6 +41,7 @@ class DB {
             const existingUser = await usersCollection.findOne({ id: String(user_id) });
             return existingUser ? true : false;
         } catch (error) {
+            console.log(error)
             return false;
         }
     }

@@ -77,9 +77,9 @@ app.get('/report', reportQueriesMiddleware, reportReqValidation, async (req, res
         const { year, month, user_id } = req.query;
 
         // check user existence 
-        if (!await db.isUserExist(req.body.user_id))
+        if (!await db.isUserExist(user_id))
             throw new Error(`There is no user with id: ${user_id}`);
-        const resObj = db.getReportData(user_id, year, month);
+        const resObj = await db.getReportData(user_id, year, month);
         res.json(resObj);
     } catch (error) {
         console.log(error.message);
