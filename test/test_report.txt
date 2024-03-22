@@ -1,0 +1,40 @@
+https://server-side-course.onrender.com
+
+testing getting the about
+-------------------------
+url=https://server-side-course.onrender.com/about/
+data.status_code=200
+b'[{"firstname":"Nisan","lastname":"Cohen Burayev","id":"315433656","email":"nnisan858@gmail.com"},{"firstname":"Israel","lastname":"Israeli","id":"123456789","email":"nnisan858@gmail.com"}]'
+data.text=[{"firstname":"Nisan","lastname":"Cohen Burayev","id":"315433656","email":"nnisan858@gmail.com"},{"firstname":"Israel","lastname":"Israeli","id":"123456789","email":"nnisan858@gmail.com"}]
+[{'firstname': 'Nisan', 'lastname': 'Cohen Burayev', 'id': '315433656', 'email': 'nnisan858@gmail.com'}, {'firstname': 'Israel', 'lastname': 'Israeli', 'id': '123456789', 'email': 'nnisan858@gmail.com'}]
+firstname=Nisan
+lastname=Cohen Burayev
+id=315433656
+Nisan Cohen Burayev 315433656
+
+
+testing getting the report - 1
+------------------------------
+url=https://server-side-course.onrender.com/report/?user_id=123123&year=2023&month=3
+data.status_code=200
+b'{"food":[],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}'
+data.text={"food":[],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}
+[]
+
+
+testing adding cost
+-------------------
+url=https://server-side-course.onrender.com/addcost/
+data.status_code=200
+b'"Cost item added with ID: 65fe06bdbd595fafc488be2d"'
+data.text="Cost item added with ID: 65fe06bdbd595fafc488be2d"
+
+
+testing getting the report - 1
+------------------------------
+url=https://server-side-course.onrender.com/report/?user_id=123123&year=2024&month=4
+data.status_code=200
+b'{"food":[{"day":2,"description":"milk 9","sum":8}],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}'
+data.text={"food":[{"day":2,"description":"milk 9","sum":8}],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}
+[{'day': 2, 'description': 'milk 9', 'sum': 8}]
+
