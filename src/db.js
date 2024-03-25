@@ -1,5 +1,5 @@
 // Nisan Cohen Burayev 315433656
-
+// ./db.js file
 import { MongoClient } from 'mongodb';
 import { categories } from './validators.js';
 import dotenv from 'dotenv';

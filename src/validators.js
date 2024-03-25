@@ -1,4 +1,5 @@
 // Nisan Cohen Burayev 315433656
+// ./validators.js file
 
 export const categories = ['food', 'health', 'housing', 'sport', 'education', 'transportation', 'other'];
 export const months = [

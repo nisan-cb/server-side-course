@@ -1,4 +1,5 @@
 // Nisan Cohen Burayev 315433656
+// ./server.js file
 
 import express from 'express';
 import dotenv from 'dotenv';
@@ -38,10 +39,10 @@ app.get('/about', (_req, res) => {
             email: 'nnisan858@gmail.com'
         },
         {
-            firstname: 'Israel',
-            lastname: 'Israeli',
-            id: '123456789',
-            email: 'nnisan858@gmail.com'
+            firstname: 'Dudi',
+            lastname: 'Kreis',
+            id: '311333900',
+            email: 'dudikreis@gmail.com'
         },
     ]);
 });
