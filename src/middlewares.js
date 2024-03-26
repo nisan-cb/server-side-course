@@ -7,9 +7,9 @@ import { getMonth, descriptionValidation, yearValidation, monthValidation, dayVa
 // convert income details to correct type - in addCost endpoint
 export const addCostBodyMiddleware = (req, _res, next) => {
     req.body.user_id = String(req.body.user_id);
-    req.body.year = Number(req.body.year);
-    req.body.month = getMonth(req.body.month);
-    req.body.day = Number(req.body.day);
+    req.body.year = req.body.year ? Number(req.body.year) : new Date().getFullYear();;
+    req.body.month = req.body.month ? getMonth(req.body.month) : getMonth(new Date().getMonth() + 1);
+    req.body.day = req.body.day ? Number(req.body.day) : new Date().getDate();
     req.body.description = String(req.body.description);
     req.body.category = String(req.body.category);
     req.body.sum = Number(req.body.sum);

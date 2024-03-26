@@ -50,6 +50,7 @@ app.get('/about', (_req, res) => {
 // addCost endpoint
 app.post('/addcost', addCostBodyMiddleware, addCostReqValidation, async (req, res) => {
     const { user_id, year, month, day, description, category, sum } = req.body;
+    console.log(req.body);
     try {
         // check user existence 
         if (!await db.isUserExist(req.body.user_id))
